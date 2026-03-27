@@ -1,0 +1,247 @@
+/* Reset básico - Remove margens e paddings padrão de todos os elementos */
+* {
+    margin: 0; /* Remove margem externa */
+    padding: 0; /* Remove preenchimento interno */
+    box-sizing: border-box; /* Inclui padding e border na largura/altura total */
+}
+
+/* Corpo da página - Define o layout geral da página */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Família de fontes, com fallbacks */
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima de 100% da viewport */
+    overflow-x: hidden; /* Esconde overflow horizontal */
+}
+
+/* Main container - Container principal do conteúdo */
+main {
+    text-align: center; /* Alinha texto ao centro */
+    max-width: 1200px; /* Largura máxima */
+    padding: 2rem; /* Preenchimento interno */
+}
+
+/* Header - Cabeçalho da página */
+header {
+    margin-bottom: 3rem; /* Margem inferior para espaçamento */
+}
+
+header h1 {
+    font-size: 3rem; /* Tamanho da fonte grande */
+    font-weight: 700; /* Peso da fonte negrito */
+    margin-bottom: 0.5rem; /* Margem inferior */
+    letter-spacing: -0.02em; /* Espaçamento entre letras reduzido */
+}
+
+header p {
+    font-size: 1.2rem; /* Tamanho da fonte médio */
+    color: #b3b3b3; /* Cor cinza clara */
+    font-weight: 400; /* Peso da fonte normal */
+}
+
+/* Seção de perfis - Container para os perfis */
+.profiles {
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza itens */
+    gap: 2rem; /* Espaçamento entre itens */
+    flex-wrap: wrap; /* Permite quebra de linha */
+}
+
+/* Cada perfil - Estilo individual de cada perfil */
+.profile {
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transform e sombra */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 0.8rem; /* Preenchimento interno */
+    min-width: 200px; /* Largura mínima */
+    max-width: 250px; /* Largura máxima */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Direção vertical */
+    align-items: center; /* Alinha itens ao centro */
+}
+
+.profile:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente no hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Adiciona sombra no hover */
+}
+
+.profile:focus {
+    outline: 2px solid #fff; /* Contorno branco no foco */
+    outline-offset: 4px; /* Deslocamento do contorno */
+}
+
+/* Figura dentro do perfil - Container para imagem e legenda */
+figure {
+    margin: 0; /* Remove margem */
+    width: 100%; /* Largura total */
+}
+
+figure img {
+    width: 100%; /* Largura total */
+    height: 180px; /* Altura fixa */
+    object-fit: cover; /* Cobre a área sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas */
+    display: block; /* Remove espaço extra abaixo */
+}
+
+figcaption {
+    margin-top: 1rem; /* Margem superior */
+    font-size: 1.4rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    color: #fff; /* Cor branca */
+    text-align: center; /* Alinhamento central */
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Reduz tamanho da fonte */
+    }
+
+    .profiles {
+        gap: 1.5rem; /* Reduz espaçamento */
+    }
+
+    .profile {
+        min-width: 180px; /* Largura mínima reduzida */
+        max-width: 220px; /* Largura máxima reduzida */
+        padding: 1rem; /* Preenchimento ajustado */
+    }
+
+    figure img {
+        height: 150px; /* Altura reduzida */
+    }
+
+    figcaption {
+        font-size: 1.2rem; /* Fonte menor */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem; /* Reduz preenchimento */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Fonte ainda menor */
+    }
+
+    .profiles {
+        flex-direction: column; /* Muda para coluna */
+        align-items: center; /* Centraliza itens */
+        gap: 2rem; /* Espaçamento vertical */
+    }
+
+    .profile {
+        width: 100%; /* Largura total */
+        max-width: 250px; /* Largura máxima */
+        padding: 1rem; /* Preenchimento */
+    }
+
+    figure img {
+        height: 200px; /* Altura maior para mobile */
+    }
+
+    figcaption {
+        font-size: 1.4rem; /* Fonte padrão */
+    }
+}
+
+/* Responsividade para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Tamanho médio da fonte */
+    }
+
+    .profiles {
+        gap: 1.5rem; /* Espaçamento ajustado */
+    }
+
+    .profile {
+        min-width: 180px; /* Largura mínima */
+        max-width: 220px; /* Largura máxima */
+        padding: 0.8rem; /* Preenchimento */
+    }
+
+    figure img {
+        height: 160px; /* Altura ajustada */
+    }
+
+    figcaption {
+        font-size: 1.3rem; /* Fonte ajustada */
+    }
+}
+
+/* Responsividade para desktops */
+@media (min-width: 769px) {
+    main {
+        max-width: 1400px; /* Largura máxima maior para telas grandes */
+    }
+
+    header h1 {
+        font-size: 3.5rem; /* Fonte maior para desktops */
+    }
+
+    .profiles {
+        gap: 2.5rem; /* Espaçamento maior */
+    }
+
+    .profile {
+        min-width: 220px; /* Largura mínima maior */
+        max-width: 280px; /* Largura máxima maior */
+        padding: 1rem; /* Preenchimento */
+    }
+
+    figure img {
+        height: 200px; /* Altura maior */
+    }
+
+    figcaption {
+        font-size: 1.5rem; /* Fonte maior */
+    }
+}
+
+/* Estilos para o botão de alternância de tema */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Modo claro */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-mode .profile {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+body.light-mode .profile:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode header p {
+    color: #666;
+}
+
+body.light-mode .theme-toggle {
+    color: #000;
+}
