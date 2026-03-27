@@ -1,20 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetLura</title>
-    <link rel="stylesheet" href="ativos/style.css">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to NetLura</h1>
-    </header>
     <main>
-        <p>Your content goes here. Use ativos for your assets.</p>
+        <header>
+            <h1>Quem está assistindo?</h1>
+            <p>Selecione um perfil para continuar.</p>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro/claro">🌙</button>
+        </header>
+
+        <ul class="profiles" aria-label="Seleção de perfis">
+            <li class="profile">
+                <a href="catalogo/catalogo.html">
+                    <figure>
+                        <img src="/ativos/perfil-1.jpg" alt="Personagem em estilo stop-motion gótico, com cabelos roxos bagunçados e monóculo, diante de um cenário sombrio com escadas e velas.">
+                        <figcaption>Gustavo</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li class="profile">
+                <a href="catalogo/catalogo.html">
+                    <figure>
+                        <img src="/ativos/perfil-2.jpg" alt="Bonezinho Azul Estiloso.">
+                        <figcaption>Thiago</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li class="profile">
+                <a href="catalogo/catalogo.html">
+                    <figure>
+                        <img src="/ativos/perfil-4.JPG" alt="Boto Estiloso.">
+                        <figcaption>Boto</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li class="profile">
+                <a href="catalogo/catalogo.html">
+                    <figure>
+                        <img src="/ativos/perfil-3.JPG" alt="Cangaceiro.">
+                        <figcaption>Jão Carlo</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
     </main>
-    <footer>
-        <p>&copy; 2026 NetLura. All rights reserved.</p>
-    </footer>
+
 </body>
 </html>
